@@ -24,7 +24,7 @@ jobs:
           java-version: '17'
 
       # Project ka koi Gradle Wrapper (gradlew) nahi hai isliye Gradle
-      # directly is action se install/run karwa rahe hain â€” sahi Gradle
+      # directly is action se instal/run karwa rahe hain â€” sahi Gradle
       # version explicitly bata rahe hain (AGP 9.1.1 ko Gradle 9.3.1+ chahiye)
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v6
