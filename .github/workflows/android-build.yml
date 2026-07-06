@@ -24,16 +24,16 @@ jobs:
           java-version: '17'
 
       # Project ka koi Gradle Wrapper (gradlew) nahi hai isliye Gradle
-      # directly is action se install/run karwa rahe hain — sahi Gradle
-      # version explicitly bata rahe hain (AGP 9.1.1 ko Gradle 9.1.0+ chahiye)
+      # directly is action se install/run karwa rahe hain â€” sahi Gradle
+      # version explicitly bata rahe hain (AGP 9.1.1 ko Gradle 9.3.1+ chahiye)
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v6
         with:
-          gradle-version: '9.1.0'
+          gradle-version: '9.3.1'
 
       # Debug build ke liye debug.keystore chahiye (build.gradle.kts isko
       # rootDir mein dhoondta hai). Yeh file .gitignore mein hai isliye
-      # repo mein nahi hai — CI mein standard Android debug keystore
+      # repo mein nahi hai â€” CI mein standard Android debug keystore
       # generate kar rahe hain (well-known default alias/passwords).
       - name: Generate debug keystore
         run: |
